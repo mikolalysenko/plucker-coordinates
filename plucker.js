@@ -84,18 +84,51 @@ exports.toMat4 = pluckerToMat4
 
 //Check if a point is on the line
 function pluckerTestVec4(p, q) {
-
 }
 exports.testVec4 = pluckerTestVec4
 
 //Check if a 3d point is on the line
 function pluckerTestVec3(p, q) {
-
 }
 exports.testVec3 = pluckerTestVec3
 
 //Apply a transformation to the plucker coordiantes
-function pluckerTransformMat4(out, M, p) {
-
+function pluckerTransformMat4(out, line, M) {
 }
 exports.transformMat4 = pluckerTransformMat4
+
+function pluckerMeetLine(out, p1, p2) {
+}
+exports.meetLine = pluckerMeetLine
+
+function pluckerMeetPlane(out, line, plane) {
+}
+exports.meetPlane = pluckerMeetPlane
+
+function pluckerJoinLine(out, p1, p2) {
+}
+exports.joinLine = pluckerJoinLine
+
+function pluckerJoinVec4(out, line, point) {
+}
+exports.joinVec4 = pluckerJoinPoint
+
+function pluckerJoinVec3(out, line, point) {
+}
+exports.joinVec3 = pluckerJoinPoint
+
+function pluckerDual(out, line) {
+}
+exports.dual = pluckerDual
+
+function pluckerRandomize(out, line) {
+}
+exports.random = pluckerRandomize
+
+function pluckerToString(line) {
+}
+exports.str = pluckerToString
+
+function pluckerTestSkew(line1, line2) {
+}
+exports.skew = pluckerTestSkew
