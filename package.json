@@ -1,0 +1,42 @@
+{
+  "name": "plucker-coordinates",
+  "version": "0.0.0",
+  "description": "Plucker coordinates for encoding 3D lines",
+  "main": "plucker.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gl-matrix": "~2.1.0",
+    "tape": "~2.12.2"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/plucker-coordinates.git"
+  },
+  "keywords": [
+    "plucker",
+    "coordinates",
+    "line",
+    "3D",
+    "geometry",
+    "grassman",
+    "geometric",
+    "algebra",
+    "distance",
+    "closest",
+    "point",
+    "plane"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/plucker-coordinates/issues"
+  },
+  "homepage": "https://github.com/mikolalysenko/plucker-coordinates"
+}
