@@ -5,6 +5,11 @@
 //  [ p01, p02, p03, p23, p31, p12 ]
 //
 
+function pluckerCreate() {
+  return new Float32Array(6)
+}
+exports.create = pluckerCreate
+
 //Compute plucker coordinates for a line given two points in projective space
 function pluckerFromVec4(out, q1, q2) {
   var x1 = q1[0]
