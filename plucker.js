@@ -5,13 +5,25 @@
 //  [ p01, p02, p03, p23, p31, p12 ]
 //
 
-var EPSILIN = 1e-8
+var EPSILON = 1e-8
 
 //Create a line
 function pluckerCreate() {
   return new Float32Array(6)
 }
 exports.create = pluckerCreate
+
+//Copies a line
+function pluckerCopy(out, p) {
+  out[0] = p[0]
+  out[1] = p[1]
+  out[2] = p[2]
+  out[3] = p[3]
+  out[4] = p[4]
+  out[5] = p[5]
+  return out
+}
+exports.copy = pluckerCopy
 
 //Compute plucker coordinates for a line given two points in projective space
 function pluckerFromVec4(out, q1, q2) {
@@ -95,7 +107,7 @@ function pluckerToMat4(out, p) {
   out[4] = -p03
   out[5] = 0
   out[6] = p01
-  out[7] = -p31
+  out[7] = -p13
 
   out[8] = p02
   out[9] = -p01
@@ -103,7 +115,7 @@ function pluckerToMat4(out, p) {
   out[11] = -p12
 
   out[12] = p23
-  out[13] = p31
+  out[13] = p13
   out[14] = p12
   out[15] = 0
 
@@ -111,6 +123,14 @@ function pluckerToMat4(out, p) {
 }
 exports.toMat4 = pluckerToMat4
 
+function pluckerDistanceToPoint(p, q) {
+}
+exports.distanceToPoint = pluckerDistanceToPoint
+
+
+function pluckerClosestPointToPoint(out, p, q) {
+}
+exports.closestPointToPoint = pluckerClosestPointToPoint
 
 function pluckerDistanceToOrigin(p) {
   var p01 = p[0]
@@ -163,11 +183,11 @@ exports.joinLine = pluckerJoinLine
 
 function pluckerJoinVec4(out, line, point) {
 }
-exports.joinVec4 = pluckerJoinPoint
+exports.joinVec4 = pluckerJoinVec4
 
 function pluckerJoinVec3(out, line, point) {
 }
-exports.joinVec3 = pluckerJoinPoint
+exports.joinVec3 = pluckerJoinVec3
 
 function pluckerDual(out, line) {
 }
@@ -231,4 +251,4 @@ function pluckerEqual(line1, line2) {
   }
   return true
 }
-exports.equal = pluckerEqual
+exports.equals = pluckerEqual

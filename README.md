@@ -40,7 +40,15 @@ p01 * p12 + p02 * p13 + p03 * p23 === 0
 
 **Returns** A length 6 `Float32Array`
 
-### `plücker.fromVec4(out, q1, q2)`
+#### `plücker.copy(out, p)`
+Copies a line
+
+* `out` recieves the result
+* `p` is the line to copy
+
+**Returns** `out`
+
+#### `plücker.fromVec4(out, q1, q2)`
 Constructs an (oriented) line passing through the pair of points `q1` and `q2` in homogeneous coordinates.
 
 * `out` recieves the Plücker coordiantes for the line
@@ -93,4 +101,3 @@ Converts a line into a string.
 
 # Credits
 (c) 2014 Mikola Lysenko. MIT License
-

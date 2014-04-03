@@ -9,8 +9,8 @@
   "dependencies": {
   },
   "devDependencies": {
-    "gl-matrix": "~2.1.0",
-    "tape": "~2.12.2"
+    "gl-matrix": "^2.2.1",
+    "tape": "^2.12.2"
   },
   "scripts": {
     "test": "tape test/*.js"
